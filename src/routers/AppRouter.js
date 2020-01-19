@@ -4,6 +4,7 @@ import { Router, Route, Switch, Link, NavLink } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import HomePage from '../components/HomePage';
 import ContactPage from '../components/ContactPage';
+import PortfolioItemPage from '../components/PortfolioItemPage';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 
@@ -14,6 +15,7 @@ const AppRouter = () => (
 		<div>
 			<Switch>
 				<Route path="/" component={HomePage} exact={true}/>
+				<Route path="/portfolio/:id" component={PortfolioItemPage}/>
 				<Route path="/contact" component={ContactPage}/>
 				<Route component={NotFoundPage} />
 			</Switch>
