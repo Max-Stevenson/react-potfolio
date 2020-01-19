@@ -4,7 +4,6 @@ import configureStore from './store/configureStore';
 import { startSetExpenses } from './actions/expenses';
 import { Provider } from 'react-redux';
 import { login, logout } from './actions/auth';
-import getVisibleExpenses from './selectors/expenses';
 import ReactDOM from 'react-dom';
 import 'normalize.css/normalize.css';
 import '../styles/styles.scss';
@@ -36,7 +35,7 @@ firebase.auth().onAuthStateChanged((user) => {
     store.dispatch(startSetExpenses()).then(() => {
       renderApp();
       if (history.location.pathname === '/') {
-        history.push('/dashboard');
+        history.push('/');
       };
     });
   } else {
