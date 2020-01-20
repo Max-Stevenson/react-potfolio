@@ -6,6 +6,7 @@ import HomePage from '../components/HomePage';
 import ContactPage from '../components/ContactPage';
 import PortfolioItemPage from '../components/PortfolioItemPage';
 import PorfolioPage from '../components/PortfolioPage';
+import Header from '../components/Header';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 
@@ -14,6 +15,7 @@ export const history = createBrowserHistory();
 const AppRouter = () => (
   <Router history={history}>
 		<div>
+		<Header/>
 			<Switch>
 				<Route path="/" component={HomePage} exact={true}/>
 				<Route path="/portfolio" component={PorfolioPage} exact={true}/>
